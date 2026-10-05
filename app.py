@@ -12,58 +12,146 @@ st.set_page_config(
 # ---------- Professional CSS ----------
 st.markdown("""
 <style>
-    .stApp {
-        background: #F5F7FB;
-    }
-    [data-testid="stSidebar"] {
-        background: #172B4D;
-    }
-    [data-testid="stSidebar"] * {
-        color: white !important;
-    }
-    .main-title {
-        font-size: 32px;
-        font-weight: 800;
-        color: #172B4D;
-        margin-bottom: 0;
-    }
-    .sub-title {
-        color: #667085;
-        font-size: 15px;
-        margin-top: 2px;
-        margin-bottom: 20px;
-    }
-    .kpi {
-        background: white;
-        border-radius: 14px;
-        padding: 18px 20px;
-        box-shadow: 0 3px 14px rgba(23,43,77,.08);
-        border: 1px solid #E7EAF0;
-    }
-    .kpi-label {
-        color: #667085;
-        font-size: 13px;
-        font-weight: 600;
-    }
-    .kpi-value {
-        color: #172B4D;
-        font-size: 28px;
-        font-weight: 800;
-        margin-top: 4px;
-    }
-    .section {
-        color: #172B4D;
-        font-size: 20px;
-        font-weight: 750;
-        margin: 22px 0 8px;
-    }
-    .footer {
-        text-align: center;
-        color: #98A2B3;
-        font-size: 12px;
-        padding: 22px 0 8px;
-    }
+
+/* =========================
+   MAIN APP
+========================= */
+.stApp {
+    background: #0B1220;
+    color: #E5E7EB;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+[data-testid="stSidebar"] {
+    background: #0F172A;
+    border-right: 1px solid #1E293B;
+}
+
+[data-testid="stSidebar"] * {
+    color: #F8FAFC !important;
+}
+
+/* =========================
+   MAIN TITLE
+========================= */
+.main-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #60A5FA;
+    margin-bottom: 0;
+}
+
+/* =========================
+   SUB TITLE
+========================= */
+.sub-title {
+    color: #94A3B8;
+    font-size: 15px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   KPI CARDS
+========================= */
+.kpi {
+    background: #1E293B;
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+    border: 1px solid #334155;
+}
+
+/* KPI LABEL */
+.kpi-label {
+    color: #94A3B8;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* KPI VALUE */
+.kpi-value {
+    color: #F8FAFC;
+    font-size: 28px;
+    font-weight: 800;
+    margin-top: 4px;
+}
+
+/* =========================
+   SECTION TITLES
+========================= */
+.section {
+    color: #60A5FA;
+    font-size: 20px;
+    font-weight: 750;
+    margin: 22px 0 8px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    text-align: center;
+    color: #64748B;
+    font-size: 12px;
+    padding: 22px 0 8px;
+}
+
+/* =========================
+   STREAMLIT BUTTON
+========================= */
+.stButton > button {
+    background: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.stButton > button:hover {
+    background: #3B82F6;
+}
+
+/* =========================
+   SELECTBOX / MULTISELECT
+========================= */
+div[data-baseweb="select"] > div {
+    background-color: #1E293B;
+    border-color: #334155;
+    color: #F8FAFC;
+}
+
+/* =========================
+   DATAFRAME
+========================= */
+[data-testid="stDataFrame"] {
+    border: 1px solid #334155;
+    border-radius: 10px;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0B1220;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
 </style>
+
 """, unsafe_allow_html=True)
 
 @st.cache_data
